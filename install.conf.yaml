@@ -18,8 +18,10 @@
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
     ~/.gitignore: .gitignore
+    ~/.functions: .functions
+    ~/.aliases: .aliases
 
 
-- shell:
-    - [sh pre-install.sh, Running pre installation script]
-    - [brew bundle, Installing Homebrew formulas from Brewfile]
+# - shell:
+#     - [sh pre-install.sh, Running pre installation script]
+#     - [brew bundle, Installing Homebrew formulas from Brewfile]

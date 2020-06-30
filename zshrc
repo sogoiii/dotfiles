@@ -141,11 +141,14 @@ export PATH=~/.local/bin:$PATH
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /Users/angellopozo/Documents/Ethereum/code/github/ganache/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/angellopozo/Documents/Ethereum/code/github/ganache/node_modules/tabtab/.completions/electron-forge.zsh
 
+#My Custom Aliases
+source $HOME/.aliases
 
 #golang
 export GOPATH="${HOME}/go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
 
 
 #rust

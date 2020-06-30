@@ -23,6 +23,7 @@ brew "ipfs"
 brew "jid"
 brew "jq"
 brew "mas"
+brew "tree"
 
 brew 'launchctl-completion'
 # brew "bash-completion@2"
@@ -70,6 +71,7 @@ cask "firefox"
 cask "firefox-nightly"
 cask "google-chrome"
 cask "google-chrome-canary"
+cask "opera"
 cask "iterm2"
 cask 'visual-studio-code'
 cask 'tableplus'
