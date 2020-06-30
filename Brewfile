@@ -24,6 +24,10 @@ brew "jid"
 brew "jq"
 brew "mas"
 brew "tree"
+brew "htop"
+brew "nmap"
+brew "lazydocker"
+brew "kdabir/tap/has"
 
 brew 'launchctl-completion'
 # brew "bash-completion@2"
@@ -85,7 +89,8 @@ cask "iina"
 cask 'transmission'
 cask 'steam'
 cask 'disk-inventory-x'
-
+cask 'spectacle'
+cask 'default-folder-x'
 
 # Font
 cask "font-hack-nerd-font"

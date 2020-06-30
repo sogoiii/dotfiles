@@ -25,7 +25,8 @@ alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+# alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="curl ipecho.net/plain ; echo"
 alias localip="ipconfig getifaddr en0"
 
 # Copy my public key to the pasteboard
