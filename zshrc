@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 
 # https://superuser.com/questions/544989/does-tmux-sort-the-path-variable/583502#583502
@@ -6,12 +13,6 @@ if [ -f /etc/profile ]; then
     PATH=""
     source /etc/profile
 fi
-
-
-
-
-
-
 
 
 
@@ -27,8 +28,8 @@ export ZSH=/Users/angellopozo/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLEVEL9K_MODE='nerdfont-complete'
-ZSH_THEME="powerlevel9k/powerlevel9k"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -84,6 +85,9 @@ plugins=(
   dotenv
   zsh-syntax-highlighting
   zsh-autosuggestions
+  asdf
+  colored-man-pages
+  history-search-multi-word
 )
 #NOTE ABOUT LINE ABOVE: zsh-syntax-highlighting must always be last plugin!!!
 
@@ -120,13 +124,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 #My Customizations
-
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir ssh vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator nvm node_version time)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m.%y}"
+#Disable powerLevel10 Configurator
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -154,3 +153,6 @@ source $HOME/.cargo/env
 
 #asdf
 . $(brew --prefix asdf)/asdf.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
